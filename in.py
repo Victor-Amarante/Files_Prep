@@ -8,7 +8,7 @@ cwd = os.getcwd()
 full_list = os.listdir(cwd)
 
 # criando uma lista sem pastas e sem arquivo .py
-files_list = [i for i in full_list if os.path.isfile(i) and '.py' not in i]
+files_list = [i for i in full_list if os.path.isfile(i) and '.py' not in i and '.exe' not in i]
 
 # criando uma lista com valores unicos sobre as extensoes dos arquivos
 types = list(set([i.split('.')[1] for i in files_list]))
